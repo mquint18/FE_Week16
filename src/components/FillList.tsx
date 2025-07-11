@@ -3,6 +3,7 @@ import React from "react";
 import AddNewItem from "./AddNewItem";
 import type { NewProduct, ShopList } from "../App";
 
+
 type ListProps = {
     items: ShopList[]
 }
@@ -31,7 +32,7 @@ const [newProduct, setNewProduct] = useState({});
         <div>
             <h2>Shopping List</h2>
         
-        
+
             {items.map(product => (
                 <div key={product.id}>
                     {product.name} 
