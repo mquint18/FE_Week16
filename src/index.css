@@ -1,0 +1,56 @@
+
+img {
+ display: block;
+ margin: 1rem auto;
+ max-width: 200px; 
+ border-radius: 4 rem;
+}
+
+
+html {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(206, 242, 204); }
+
+h1 {
+    background-color: rgb(163, 208, 247);
+    text-align: center; 
+    border-radius: 1rem;    
+}
+h2 {
+    text-align: center;
+    margin: 2rem auto 1rem auto;
+    background-color:  rgb(163, 208, 247);
+    border-radius: 1rem;
+}
+
+h3 {
+    margin: 2rem, auto 1rem auto;
+    background-color: rgb(231, 238, 171);
+    border-radius: 1rem;
+} 
+h4 {
+    padding-bottom: 1rem;
+}
+
+ .item-card {
+ background-color: rgb(157, 223, 237);
+ border-color: blue;
+    border-radius: 2rem;
+    margin: 6rem 6rem 6rem 6rem;
+    padding: 3px;
+    }
+
+.product-card {
+  margin: 4rem, 2rem;
+  background-color: rgb(183, 238, 231);
+  
+}
+
+.checked-btn {
+    text-align: left;
+}
+
+.product-info {
+    text-align: center;
+    margin-bottom: 2rem;
+}
