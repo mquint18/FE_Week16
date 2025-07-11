@@ -67,6 +67,7 @@ export default function AddNewItem({product}: ProductProps) {
 
         </form>
     )
+    
 console.log({product});
     }
 
