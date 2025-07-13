@@ -8,16 +8,18 @@ type ListProps = {
 
 type ProductProps = {
     product: NewProduct
+    setItems:(items:unknown)=> void;
 }
 
 let id = 1;
 
-export default function AddNewItem({product}: ProductProps) {
+export default function AddNewItem({product,setItems,items}: ProductProps) {
 
     const [newProduct, setNewProduct] = useState({});
     const [productName, setProductName] = useState(' ')
     const [productQuant, setProductQuant] = useState(0)
-    const [productPic, setProductPic] = useState('')
+    const [productPic, setProductPic] = useState('');
+    const [productId, setProductId] = useState(null);
 
 
     const [formData, setFormData] = useState({productId:0, productName:'', productQuant:0, productPic:'no pic'});
@@ -26,8 +28,28 @@ export default function AddNewItem({product}: ProductProps) {
     const handleSubmit = (event:React.ChangeEvent<HTMLFormElement>) => {
         event.preventDefault();
         setNewProduct( {name:productName, quantity:productQuant, picture:productPic,id:1})
-        console.log('Form data submitted:', formData);
-
+{/*        const updateItem = items.map((item,index)=>{
+            console.log(typeof productId)
+            if(item.id  === parseInt(productId)){
+                console.log('jrtr')
+                return  {
+                    name:productName,
+                     quantity:productQuant, 
+                     picture:productPic,
+                     id:index
+                }
+                
+            }
+            return item;
+        })
+*/}
+        setItems([...items,{
+                    name:productName,
+                     quantity:productQuant, 
+                     picture:productPic,
+                     id:productId
+        }])
+                 
     }
 
     return (
@@ -62,12 +84,17 @@ export default function AddNewItem({product}: ProductProps) {
                         />
                     
                     <label>Item Id:</label>
-
+                    <input 
+                        type="number" 
+                        name='id'
+                        value = {productId}
+                        onChange={(e) => setProductId(e.target.value)} 
+                        />
                     <button >Submit</button>
 
         </form>
     )
-    
+
 console.log({product});
     }
 

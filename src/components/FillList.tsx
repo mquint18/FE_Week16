@@ -6,6 +6,7 @@ import type { NewProduct, ShopList } from "../App";
 
 type ListProps = {
     items: ShopList[]
+    setItems: ()=> void;
 }
   
 type ProductProps = {
@@ -13,7 +14,7 @@ type ProductProps = {
 }
 
 
-export default function FillList({onShopListChange, items}: ListProps) {
+export default function FillList({onShopListChange, items,setItems}: ListProps) {
 
     const handleInputChange = (event) => {
         onShopListChange(event.target.value);
@@ -21,13 +22,13 @@ export default function FillList({onShopListChange, items}: ListProps) {
 
 const [newProduct, setNewProduct] = useState({});
 
-
+console.log(items);
 
     return (
 
         <div>
-            <AddNewItem product = {newProduct}> </AddNewItem>
-         onChange = { setShopList([...items]) }
+            <AddNewItem product={newProduct} setItems={setItems} items={items}> </AddNewItem>
+         {/* onChange = { setShopList([...items]) } */}
 
         <div>
             <h2>Shopping List</h2>
@@ -39,6 +40,8 @@ const [newProduct, setNewProduct] = useState({});
                     {product.picture}
                     {product.quantity}
                     {product.id}
+                    
+                    
                 </div>
             ))}
             <div>

@@ -27,6 +27,12 @@ export default function App() {
                 name: 'first product',
                 quantity: 0,
                 picture: 'no pic here'
+                },
+                {
+                id: 2,
+                name: 'first product',
+                quantity: 0,
+                picture: 'no pic here'
                 }
             ]);
 
@@ -55,7 +61,8 @@ return(
 
 
 <div>
-    <FillList onShopListChange = {handleFillList}/>
+    <FillList onShopListChange={handleFillList} items={items} setItems={setItems}/>
+    
 </div>
 
 </div>
