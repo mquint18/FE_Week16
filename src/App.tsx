@@ -23,17 +23,11 @@ export default function App() {
 
     const [items, setItems] = useState([
                 {
-                id: 1,
-                name: 'first product',
+                id:'',
+                name: '',
                 quantity: 0,
-                picture: 'no pic here'
+                picture: null
                 },
-                {
-                id: 2,
-                name: 'first product',
-                quantity: 0,
-                picture: 'no pic here'
-                }
             ]);
 
 //const [product, setProduct] = useState()

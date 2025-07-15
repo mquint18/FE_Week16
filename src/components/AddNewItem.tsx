@@ -11,7 +11,6 @@ type ProductProps = {
     setItems:(items:unknown)=> void;
 }
 
-let id = 1;
 
 export default function AddNewItem({product,setItems,items}: ProductProps) {
 
@@ -19,7 +18,7 @@ export default function AddNewItem({product,setItems,items}: ProductProps) {
     const [productName, setProductName] = useState(' ')
     const [productQuant, setProductQuant] = useState(0)
     const [productPic, setProductPic] = useState('');
-    const [productId, setProductId] = useState(null);
+    const [productId, setProductId] = useState('');
 
 
     const [formData, setFormData] = useState({productId:0, productName:'', productQuant:0, productPic:'no pic'});
@@ -43,12 +42,12 @@ export default function AddNewItem({product,setItems,items}: ProductProps) {
             return item;
         })
 */}
-        setItems([...items,{
+        setItems([{
                     name:productName,
                      quantity:productQuant, 
                      picture:productPic,
                      id:productId
-        }])
+                    },...items])
                  
     }
 
@@ -88,7 +87,7 @@ export default function AddNewItem({product,setItems,items}: ProductProps) {
                         type="number" 
                         name='id'
                         value = {productId}
-                        onChange={(e) => setProductId(e.target.value)} 
+                        onChange={(e) => setProductId(parseInt(e.target.value))} 
                         />
                     <button >Submit</button>
 

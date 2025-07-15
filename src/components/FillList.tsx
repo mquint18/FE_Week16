@@ -35,6 +35,18 @@ console.log(items);
         
 
             {items.map(product => (
+
+               <div key={product.id} className ='item-card' >
+            <div className ='text-center' >
+                <h2 className = 'mb-0'><strong>{product.name}</strong></h2>
+                <h4 className = 'mb-0'>Amount: {product.quantity}</h4>
+                <img src= {product.picture} />
+                <p className = 'mb-0'>Ref#: {product.id}</p>
+            </div>
+        </div>  
+            ))}
+
+    {/*}
                 <div key={product.id}>
                     {product.name} 
                     {product.picture}
@@ -43,7 +55,9 @@ console.log(items);
                     
                     
                 </div>
-            ))}
+      */}          
+            
+
             <div>
 
             </div>
