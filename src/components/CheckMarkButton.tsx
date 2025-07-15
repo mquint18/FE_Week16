@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 
 
 function CheckMarkButton() {
@@ -7,7 +7,7 @@ function CheckMarkButton() {
                 setChecked(prevIsChecked => !prevIsChecked);
             };
         return (
-            <button onClick = {handleChecked}>
+            <button className='check-mark-button' onClick = {handleChecked}>
                 {isChecked ? '✅' : '☐'}
             </button>
         );

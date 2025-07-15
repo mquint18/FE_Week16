@@ -2,7 +2,8 @@ import { useState } from "react";
 import React from "react";
 import AddNewItem from "./AddNewItem";
 import type { NewProduct, ShopList } from "../App";
-
+import CheckMarkButton from "./CheckMarkButton";
+import "./FillList.css"
 
 type ListProps = {
     items: ShopList[]
@@ -39,9 +40,10 @@ console.log(items);
                <div key={product.id} className ='item-card' >
             <div className ='text-center' >
                 <h2 className = 'mb-0'><strong>{product.name}</strong></h2>
-                <h4 className = 'mb-0'>Amount: {product.quantity}</h4>
+                <h4 className = 'mb-0'>Amount:  {product.quantity}</h4>
                 <img src= {product.picture} />
-                <p className = 'mb-0'>Ref#: {product.id}</p>
+                <p className = 'mb-0'> Item #: {product.id}</p>
+                <div className= 'check-box'> <CheckMarkButton></CheckMarkButton></div>
             </div>
         </div>  
             ))}

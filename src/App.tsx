@@ -7,14 +7,14 @@ import './App.css'
  export type ShopList = {
     id: number
     name: string
-    quantity: number
+    quantity: string
     picture: string
  }
 
 export type NewProduct = {
     id: number
     name: string
-    quantity: number
+    quantity: string
     picture: string
 }
 
@@ -50,8 +50,9 @@ return(
         
 </div>
 
-
-<h2>Shopping List: {shopList} </h2>
+<p>
+    
+</p>
 
 
 <div>

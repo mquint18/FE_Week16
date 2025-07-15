@@ -1,6 +1,7 @@
 import { useState } from "react";
 import App from "../App";
 import type { NewProduct, ShopList } from "../App";
+import "./AddNew.css"
 
 type ListProps = {
     items: ShopList[]
@@ -27,6 +28,7 @@ export default function AddNewItem({product,setItems,items}: ProductProps) {
     const handleSubmit = (event:React.ChangeEvent<HTMLFormElement>) => {
         event.preventDefault();
         setNewProduct( {name:productName, quantity:productQuant, picture:productPic,id:1})
+
 {/*        const updateItem = items.map((item,index)=>{
             console.log(typeof productId)
             if(item.id  === parseInt(productId)){
@@ -52,10 +54,11 @@ export default function AddNewItem({product,setItems,items}: ProductProps) {
     }
 
     return (
+        <div className ='add-form'>
+        <form className="add-item" onSubmit={handleSubmit}>
+            <h3 className= 'add-header'>Enter new item here:</h3>
 
-        <form onSubmit={handleSubmit}>
-
-             <label>Name:</label>
+             <label>Name:   </label>
 
                     <input 
                         type="text" 
@@ -64,7 +67,7 @@ export default function AddNewItem({product,setItems,items}: ProductProps) {
                         onChange={(e) => setProductName(e.target.value)} 
                         />
 
-                    <label>Amount:</label>
+                    <label>   Amount: </label>
 
                     <input 
                         type="number"
@@ -73,7 +76,7 @@ export default function AddNewItem({product,setItems,items}: ProductProps) {
                         onChange={(e) => setProductQuant(parseInt(e.target.value))} 
                         />
 
-                    <label>Picture Link:</label>
+                    <label>  Picture Link: </label>
 
                     <input 
                         type="text" 
@@ -82,16 +85,17 @@ export default function AddNewItem({product,setItems,items}: ProductProps) {
                         onChange={(e) => setProductPic(e.target.value)} 
                         />
                     
-                    <label>Item Id:</label>
+                    <label> Item Id: </label>
                     <input 
-                        type="number" 
+                        type="string" 
                         name='id'
                         value = {productId}
-                        onChange={(e) => setProductId(parseInt(e.target.value))} 
+                        onChange={(e) => setProductId(e.target.value)} 
                         />
                     <button >Submit</button>
 
         </form>
+    </div>
     )
 
 console.log({product});
