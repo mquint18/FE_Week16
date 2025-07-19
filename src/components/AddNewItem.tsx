@@ -55,7 +55,7 @@ export default function AddNewItem({product,setItems,items}: ProductProps) {
 
     return (
         <div className ='add-form'>
-        <form className="add-item" onSubmit={handleSubmit}>
+        <form className="add-item" onSubmit={handleSubmit} id = "add-form">
             <h3 className= 'add-header'>Enter new item here:</h3>
 
              <label>Name:   </label>
