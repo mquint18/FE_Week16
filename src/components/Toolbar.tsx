@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import ToolbarButton from "./ToolbarButton";
-import HideAddForm from "./HideAddForm";
 
 
 export default function Toolbar({}) {
@@ -18,7 +17,8 @@ export default function Toolbar({}) {
      return (
     <div className = "container">
         <div className="btn-group">
-        <ToolbarButton text={'Add Item'} onClick={()=> handleAddProduct()}/>  
+            
+        <ToolbarButton text={'Add Item'} onClick={()=> alert('old add')}/>
         <ToolbarButton text={'Edit Item'} onClick={()=>alert("Change Item")}/>
         <ToolbarButton text={"Remove Item"} onClick={()=>alert("Do not click this button!")}/>
         </div>

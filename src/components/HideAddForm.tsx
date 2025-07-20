@@ -1,15 +1,21 @@
 import React from "react";
+import { useState } from "react";
+import '../App.css'
 
-export default function HideAddForm({showForm}) {
-    const hideFormStyle = {
-        '--add-form': showForm === 'visible' ? 'block' : 'none',
-        '--add-btn' : showForm === 'highlighted' ? 'blue' : 'white',
-    };
-        
 
-return (
-    <div style={hideFormStyle}>
-        <button style={{display: 'var(--add-form', color: 'var(--add-btn'}}></button>
-    </div>
-)    
+const HideAdd = () => {
+    
+    const [toggle, setToggle] = useState(false);
+
+    const handleClick = () => {
+        setToggle(!toggle)
+    }
+
+    return (
+        <div>
+            <button onClick={() => setToggle(!toggle)} className="btn btn-primary mb-5">Add Item</button>
+
+
+        </div>
+    )
 }

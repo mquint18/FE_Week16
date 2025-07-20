@@ -1,4 +1,6 @@
 import  { useState } from "react";
+import { Button } from "react-bootstrap";
+import '../index.css'
 
 
 function CheckMarkButton() {
@@ -7,10 +9,11 @@ function CheckMarkButton() {
                 setChecked(prevIsChecked => !prevIsChecked);
             };
         return (
-            <button className='check-mark-button' onClick = {handleChecked}>
-                {isChecked ? '✅' : '☐'}
-            </button>
+            <Button className='check-mark-button' variant="success" onClick = {handleChecked}>
+                {isChecked ? '✅' : '☐'} Check
+            </Button>
         );
     }
 
     export default CheckMarkButton;
+

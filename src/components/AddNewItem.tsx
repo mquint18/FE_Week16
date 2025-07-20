@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from 'react-bootstrap/Button';
 import App from "../App";
 import type { NewProduct, ShopList } from "../App";
 import "./AddNew.css"
@@ -13,6 +14,8 @@ type ProductProps = {
 }
 
 
+
+
 export default function AddNewItem({product,setItems,items}: ProductProps) {
 
     const [newProduct, setNewProduct] = useState({});
@@ -21,6 +24,10 @@ export default function AddNewItem({product,setItems,items}: ProductProps) {
     const [productPic, setProductPic] = useState('');
     const [productId, setProductId] = useState('');
 
+    const [toggle, setToggle] = useState(false);
+    const handleClick = () => {
+        setToggle(!toggle)
+    }
 
     const [formData, setFormData] = useState({productId:0, productName:'', productQuant:0, productPic:'no pic'});
 
@@ -54,7 +61,10 @@ export default function AddNewItem({product,setItems,items}: ProductProps) {
     }
 
     return (
-        <div className ='add-form'>
+        <div className="d-flex gap-2 mb-2">
+             <Button onClick={() => setToggle(!toggle)} size= "lg" style= {{backgroundColor: toggle ? 'red' : 'green', color: toggle ? 'black' : "white" }}>Add Item</Button>
+            
+        <div className ='add-form' style={{display: toggle ? 'block' : 'none'}}>
         <form className="add-item" onSubmit={handleSubmit} id = "add-form">
             <h3 className= 'add-header'>Enter new item here:</h3>
 
@@ -95,7 +105,7 @@ export default function AddNewItem({product,setItems,items}: ProductProps) {
                     <button >Submit</button>
 
         </form>
-    </div>
+    </div></div>
     )
 
 console.log({product});
