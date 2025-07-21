@@ -18,7 +18,6 @@ export default function Toolbar({}) {
     <div className = "container">
         <div className="btn-group">
             
-        <ToolbarButton text={'Add Item'} onClick={()=> alert('old add')}/>
         <ToolbarButton text={'Edit Item'} onClick={()=>alert("Change Item")}/>
         <ToolbarButton text={"Remove Item"} onClick={()=>alert("Do not click this button!")}/>
         </div>

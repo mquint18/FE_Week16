@@ -9,7 +9,7 @@ function CheckMarkButton() {
                 setChecked(prevIsChecked => !prevIsChecked);
             };
         return (
-            <Button className='check-mark-button' variant="success" onClick = {handleChecked}>
+            <Button className='check-mark-button' variant="success" size='lg' onClick = {handleChecked}>
                 {isChecked ? '✅' : '☐'} Check
             </Button>
         );

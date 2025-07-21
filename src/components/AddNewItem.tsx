@@ -36,7 +36,7 @@ export default function AddNewItem({product,setItems,items}: ProductProps) {
         event.preventDefault();
         setNewProduct( {name:productName, quantity:productQuant, picture:productPic,id:1})
 
-{/*        const updateItem = items.map((item,index)=>{
+     {/*}  const updateItem = items.map((item,index)=>{
             console.log(typeof productId)
             if(item.id  === parseInt(productId)){
                 console.log('jrtr')
@@ -50,7 +50,7 @@ export default function AddNewItem({product,setItems,items}: ProductProps) {
             }
             return item;
         })
-*/}
+        {*/}
         setItems([{
                     name:productName,
                      quantity:productQuant, 

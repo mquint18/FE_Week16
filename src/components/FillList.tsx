@@ -3,7 +3,7 @@ import React from "react";
 import AddNewItem from "./AddNewItem";
 import type { NewProduct, ShopList } from "../App";
 import CheckMarkButton from "./CheckMarkButton";
-import "./FillList.css"
+import DeleteItem from "./DeleteItem";
 
 type ListProps = {
     items: ShopList[]
@@ -22,6 +22,7 @@ export default function FillList({onShopListChange, items,setItems}: ListProps) 
     };
 
 const [newProduct, setNewProduct] = useState({});
+
 
 console.log(items);
 
@@ -44,6 +45,9 @@ console.log(items);
                 <img src= {product.picture} />
                 <p className = 'mb-0'> Item #: {product.id}</p>
                 <div className= 'check-box'> <CheckMarkButton></CheckMarkButton></div>
+                <div>
+                    
+                </div>
             </div>
         </div>  
             ))}
