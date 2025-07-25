@@ -5,14 +5,14 @@ import FillList from './components/FillList'
 import './App.css'
 
  export type ShopList = {
-    id: number
+    id: string
     name: string
     quantity: string
     picture: string
  }
 
 export type NewProduct = {
-    id: number
+    id: string
     name: string
     quantity: string
     picture: string

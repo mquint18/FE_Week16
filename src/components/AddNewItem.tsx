@@ -105,7 +105,11 @@ export default function AddNewItem({product,setItems,items}: ProductProps) {
                     <button >Submit</button>
 
         </form>
-    </div></div>
+    </div>
+    <div>
+        
+    </div>
+    </div>
     )
 
 console.log({product});

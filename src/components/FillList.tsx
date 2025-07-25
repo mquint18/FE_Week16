@@ -4,6 +4,7 @@ import AddNewItem from "./AddNewItem";
 import type { NewProduct, ShopList } from "../App";
 import CheckMarkButton from "./CheckMarkButton";
 import DeleteItem from "./DeleteItem";
+import ChangeQuant from "./ChangeQuant";
 
 type ListProps = {
     items: ShopList[]
@@ -45,8 +46,8 @@ console.log(items);
                 <img src= {product.picture} />
                 <p className = 'mb-0'> Item #: {product.id}</p>
                 <div className= 'check-box'> <CheckMarkButton></CheckMarkButton></div>
-                <div>
-                    
+                <div className="update-box"> 
+
                 </div>
             </div>
         </div>  
@@ -65,7 +66,7 @@ console.log(items);
             
 
             <div>
-
+                <ChangeQuant items={items} setItems= {setItems} product ={newProduct}></ChangeQuant>
             </div>
         </div>
         </div>
