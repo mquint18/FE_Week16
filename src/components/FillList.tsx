@@ -9,6 +9,7 @@ import ChangeQuant from "./ChangeQuant";
 type ListProps = {
     items: ShopList[]
     setItems: ()=> void;
+    DeleteProduct: (id: string) => void
 }
   
 type ProductProps = {
@@ -16,7 +17,11 @@ type ProductProps = {
 }
 
 
-export default function FillList({onShopListChange, items,setItems}: ListProps) {
+export default function FillList({
+    onShopListChange, 
+    items,setItems,
+    deleteProduct,
+    }: ListProps) {
 
     const handleInputChange = (event) => {
         onShopListChange(event.target.value);
@@ -49,6 +54,12 @@ console.log(items);
                 <div className="update-box"> 
 
                 </div>
+                <div>
+                    <DeleteItem
+                        key={product.id}
+                        deleteProduct={deleteProduct} 
+                        ></DeleteItem>
+                </div>
             </div>
         </div>  
             ))}
@@ -66,7 +77,7 @@ console.log(items);
             
 
             <div>
-                <ChangeQuant items={items} setItems= {setItems} product ={newProduct}></ChangeQuant>
+               
             </div>
         </div>
         </div>

@@ -12,23 +12,32 @@ type ProductProps = {
     
 }
 
-export default function DeleteItem(items:ListProps, product:ProductProps) {
+type DeleteItemProps = {
+        deleteProduct: (id: string) => void,
+        product: NewProduct[],
+        items: ShopList[],
+         setItems:(items:unknown)=> void;
+
+
+    }
+
+
+export default function DeleteItem({
+product:
+deleteProduct
+}: DeleteItemProps
+) {
     
-    const removeItem = idToRemove => {
-        setItems(product => items.filter(product.id !== idToRemove))
-    };
+
 
     return (
-        <div>
-            <ul>
-                {items.map(product => (
-                    <div key={product.id}>
-                        {product.name}
-                        <button onClick={() => removeItem(product.id)}>Delete Item</button>
-
-                    </div>
-                ))}
-            </ul>
+        <div className='d-flex justify-content-between mt-2 mb-1 align-items-center'>
+            <span>{ product.id }</span>
+            <button className='btn btn-sm btn-outline-danger' 
+            onClick={() => deleteProduct(product.id)}>Remove Item</button>
+         
+        
+           
         </div>
     )
 }

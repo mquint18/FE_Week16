@@ -37,7 +37,9 @@ export default function App() {
     setShopList(shopList);
  };
 
-
+const deleteProduct = (idToDelete: string) => {
+    setItems(items.filter(i => i.id !== idToDelete))
+}
 
 return(
 <div>
@@ -56,7 +58,11 @@ return(
 
 
 <div>
-    <FillList onShopListChange={handleFillList} items={items} setItems={setItems}/>
+    <FillList 
+    onShopListChange={handleFillList} 
+    items={items} 
+    setItems={setItems}
+    deleteProduct={deleteProduct}/>
     
 </div>
 <div>
