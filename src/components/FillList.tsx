@@ -9,7 +9,7 @@ import ChangeQuant from "./ChangeQuant";
 type ListProps = {
     items: ShopList[]
     setItems: ()=> void;
-    DeleteProduct: (id: string) => void
+    deleteProduct: (id: string) => void
 }
   
 type ProductProps = {
@@ -57,6 +57,7 @@ console.log(items);
                 <div>
                     <DeleteItem
                         key={product.id}
+                        product={product}
                         deleteProduct={deleteProduct} 
                         ></DeleteItem>
                 </div>
