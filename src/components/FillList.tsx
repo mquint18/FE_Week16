@@ -46,13 +46,20 @@ console.log(items);
 
                <div key={product.id} className ='item-card' >
             <div className ='text-center' >
+                <div className= 'check-box'> <CheckMarkButton></CheckMarkButton></div>
                 <h2 className = 'mb-0'><strong>{product.name}</strong></h2>
                 <h4 className = 'mb-0'>Amount:  {product.quantity}</h4>
                 <img src= {product.picture} />
                 <p className = 'mb-0'> Item #: {product.id}</p>
-                <div className= 'check-box'> <CheckMarkButton></CheckMarkButton></div>
                 <div className="update-box"> 
 
+                </div>
+                <div>
+                    <ChangeQuant
+                    key={product.quantity}
+                    product={product}
+
+                    ></ChangeQuant>
                 </div>
                 <div>
                     <DeleteItem

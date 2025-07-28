@@ -62,7 +62,7 @@ export default function AddNewItem({product,setItems,items}: ProductProps) {
 
     return (
         <div className="d-flex gap-2 mb-2">
-             <Button onClick={() => setToggle(!toggle)} size= "lg" style= {{backgroundColor: toggle ? 'red' : 'green', color: toggle ? 'black' : "white" }}>Add Item</Button>
+             <Button onClick={() => setToggle(!toggle)} size= "lg" style= {{backgroundColor: toggle ? 'red' : 'green', color: toggle ? 'black' : "white" }}>Add To List</Button>
             
         <div className ='add-form' style={{display: toggle ? 'block' : 'none'}}>
         <form className="add-item" onSubmit={handleSubmit} id = "add-form">
@@ -107,7 +107,7 @@ export default function AddNewItem({product,setItems,items}: ProductProps) {
         </form>
     </div>
     <div>
-        
+
     </div>
     </div>
     )

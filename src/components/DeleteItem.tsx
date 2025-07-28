@@ -1,17 +1,8 @@
 import React, {useState} from 'react';
 import { Button } from 'react-bootstrap';
 import type { NewProduct, ShopList } from "../App";
-import { isAccordionItemSelected } from 'react-bootstrap/esm/AccordionContext';
 
-type ListProps = {
-    items: ShopList[]
-    setItems:(items:unknown)=> void;
-}
 
-type ProductProps = {
-    product: NewProduct[]
-    
-}
 
 type DeleteItemProps = {
         deleteProduct: (id: string) => void,
@@ -30,9 +21,9 @@ export default function DeleteItem({
 ) 
 {
     return (
-        <div className='d-flex justify-content-between mt-2 mb-1 align-items-center'>
+        <div className='del-btn'>
            
-            <button className='btn btn-sm btn-outline-danger' 
+            <button className='btn  btn-danger' 
             onClick={() => deleteProduct(product.id)}>Remove Item</button>
          
         

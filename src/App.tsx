@@ -47,10 +47,7 @@ return(
     <h1 className = "bg-warning text-center text-primary" >Shopping List App</h1> {/*Page header/title */}
     </div>
       <div className= "container-fluid"> {/* container for the Toolbar with buttons from ./Toolbar */}
-      <Toolbar/>
-        <div className = 'col-md-12 text-center col-flex'> 
-        
-</div>
+      
 
 <p>
 
