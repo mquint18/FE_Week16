@@ -20,7 +20,7 @@ export default function ChangeQuant({items,product,setItems}: ProductProps) {
         setItems(items.map(item => (
         item.id !== itemToUpdate ? item : {
             ...items,
-            quantity: newQuant
+            quantity: {newQuant}
         }
     )))}
 
@@ -36,13 +36,16 @@ return (
     <Modal
         show = {show}
         onHide={(handleClose)}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
     >
         <Modal.Header closeButton>
             <Modal.Title>Change Quantity</Modal.Title>
-        </Modal.Header>
+        </Modal.Header> 
         <Modal.Body> Type in a number
             <div>
-                 <input
+            <input
             className = 'change-amt'
             type="number"
             name="new amount"

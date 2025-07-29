@@ -56,7 +56,7 @@ console.log(items);
                 </div>
                 <div>
                     <ChangeQuant
-                    key={product.quantity}
+                    key={product.id}
                     product={product}
 
                     ></ChangeQuant>
