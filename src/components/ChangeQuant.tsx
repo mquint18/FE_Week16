@@ -15,6 +15,7 @@ export default function ChangeQuant({items,product,setItems}: ProductProps) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+
     const newQuant = (itemToUpdate: string, newQuant: number)=>{
         setItems(items.map(item => (
         item.id !== itemToUpdate ? item : {

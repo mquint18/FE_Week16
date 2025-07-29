@@ -23,7 +23,8 @@ export default function DeleteItem({
     return (
         <div className='del-btn'>
            
-            <button className='btn  btn-danger' 
+            <button className='del-btn'
+            
             onClick={() => deleteProduct(product.id)}>Remove Item</button>
          
         
