@@ -9,7 +9,10 @@ type ProductProps = {
     setItems:(items:unknown)=> void;
 }
 
-export default function ChangeQuant({items,product,setItems}: ProductProps) {
+export default function ChangeQuant({
+    items,product,
+    setItems}:
+    ProductProps) {
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
