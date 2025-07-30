@@ -5,6 +5,7 @@ import type { NewProduct, ShopList } from "../App";
 import CheckMarkButton from "./CheckMarkButton";
 import DeleteItem from "./DeleteItem";
 import ChangeQuant from "./ChangeQuant";
+import UpdateQuant from "./UpdateQuant";
 
 type ListProps = {
     items: ShopList[]
@@ -55,11 +56,10 @@ console.log(items);
 
                 </div>
                 <div>
-                    <ChangeQuant
-                    key={product.id}
-                    product={product}
-
-                    ></ChangeQuant>
+                   <UpdateQuant
+                        key={product.id}
+                        product = {product}
+                        ></UpdateQuant>
                 </div>
                 <div>
                     <DeleteItem
