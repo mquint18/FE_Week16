@@ -9,13 +9,16 @@ type UpdateQuantProps = {
 
 }
 
-export default function UpdateQuant({product}:UpdateQuantProps)
+export default function UpdateQuant({product, items, setItems}:UpdateQuantProps)
 
 {
 const [toggle, setToggle] = useState(false);
     const handleClick = () => {
-        setToggle(!toggle)}
-
+        setToggle(!toggle)
+        setItems([])
+    }
+//update add logic - match id and update new quant
+//setItems with new values (...items,newquant)
     
 
     return (
@@ -23,7 +26,7 @@ const [toggle, setToggle] = useState(false);
         <div>
 
             <Button className="udpate-btn"
-            onClick={() => setToggle(!toggle)}
+            onClick={() => handleClick()}
             size="lg"
             style={{backgroundColor: toggle ? 'orange' : 'blue',
                 color: toggle ? 'black' : 'white'

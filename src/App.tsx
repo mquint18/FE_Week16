@@ -29,7 +29,7 @@ export default function App() {
                 picture: null
                 },
             ]);
-
+console.log(items)
 //const [product, setProduct] = useState()
 
  const [shopList, setShopList] = useState([])

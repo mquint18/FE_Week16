@@ -18,6 +18,7 @@ type ProductProps = {
 
 export default function AddNewItem({product,setItems,items}: ProductProps) {
 
+    const [newProduct, setNewProduct] = useState({});
     const [productName, setProductName] = useState(' ')
     const [productQuant, setProductQuant] = useState(0)
     const [productPic, setProductPic] = useState('');

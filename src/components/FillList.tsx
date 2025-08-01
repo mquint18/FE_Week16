@@ -4,7 +4,6 @@ import AddNewItem from "./AddNewItem";
 import type { NewProduct, ShopList } from "../App";
 import CheckMarkButton from "./CheckMarkButton";
 import DeleteItem from "./DeleteItem";
-import ChangeQuant from "./ChangeQuant";
 import UpdateQuant from "./UpdateQuant";
 
 type ListProps = {
@@ -57,6 +56,8 @@ console.log(items);
                 </div>
                 <div>
                    <UpdateQuant
+                        items={items}
+                        setItems  = {setItems}
                         key={product.id}
                         product = {product}
                         ></UpdateQuant>
